@@ -1,0 +1,158 @@
+.post-thumb {
+    height: 220px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.post-title {
+    margin-top: 15px;
+}
+
+.post-slide.slick-slide {
+    padding: 10px;
+    transition: all 400ms ease;
+    margin: 10px 15px;
+    background: #fff;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.1);
+}
+
+.post-slide:hover {
+    background: #fdfdfd;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
+}
+
+div#fetch-posts {
+    position: relative;
+}
+
+#fetch-posts button.slick-arrow {
+    position: absolute;
+    z-index: 11;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#fetch-posts button.slick-prev.slick-arrow {
+    left: 0;
+    font-size: 0;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
+    border-radius: 50%;
+}
+
+#fetch-posts button.slick-next.slick-arrow {
+    right: 0;
+    font-size: 0;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
+    border-radius: 50%;
+}
+
+#fetch-posts button.slick-prev.slick-arrow:before {
+    content: "";
+    background-image: url(/wp-content/uploads/2022/11/next.png);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-size: contain;
+    transform: rotate(180deg);
+    position: relative;
+    left: -2px;
+}
+
+#fetch-posts button.slick-next.slick-arrow:before {
+    content: "";
+    background-image: url(/wp-content/uploads/2022/11/next.png);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-size: contain;
+    position: relative;
+    left: 1px;
+}
+
+.post-slide {
+    position: relative;
+}
+
+a.link-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+}
+
+input#post-url {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+h4 {
+    margin-bottom: 10px;
+}
+
+input#post-url-submit {
+    margin-bottom: 20px;
+}
+
+ul.slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding-top: 20px;
+	margin-left: 0;
+}
+
+ul.slick-dots li {
+    margin: 0 5px;
+}
+
+ul.slick-dots li button {
+    background: lightgray;
+    font-size: 0;
+    padding: 0;
+    width: 15px;
+    height: 5px;
+    border-radius: 10px;
+}
+
+ul.slick-dots li.slick-active button {
+    width: 25px;
+    background: black;
+}
+
+@media (max-width: 600px) {
+	ul.slick-dots li.slick-active button {
+		width: 10px;
+		height: 10px;
+	}
+
+	ul.slick-dots li button {
+		width: 10px;
+		height: 10px;
+	}
+	
+	.post-slide.slick-slide {
+		margin: 3px;
+	}
+}
